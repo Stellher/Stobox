@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redirecting to Stobox...</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #1a2a6c, #b21f1f, #fdbb2d);
+            background-size: 400% 400%;
+            animation: gradient 15s ease infinite;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            overflow: hidden;
+        }
+        
+        @keyframes gradient {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        
+        .container {
+            text-align: center;
+            max-width: 800px;
+            padding: 2rem;
+            background: rgba(0, 0, 0, 0.7);
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(10px);
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: #fdbb2d;
+        }
+        
+        p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            line-height: 1.6;
+        }
+        
+        .url-display {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 1rem;
+            border-radius: 8px;
+            margin: 1.5rem 0;
+            font-family: monospace;
+            font-size: 1.1rem;
+            word-break: break-all;
+        }
+        
+        .loader {
+            display: inline-block;
+            width: 50px;
+            height: 50px;
+            border: 5px solid rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            border-top-color: #fdbb2d;
+            animation: spin 1s ease-in-out infinite;
+            margin: 1rem 0;
+        }
+        
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+        
+        .redirect-info {
+            margin-top: 1.5rem;
+            font-size: 1rem;
+            opacity: 0.8;
+        }
+        
+        .manual-link {
+            display: inline-block;
+            margin-top: 1.5rem;
+            padding: 0.8rem 1.5rem;
+            background: #fdbb2d;
+            color: #1a2a6c;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+        
+        .manual-link:hover {
+            background: #ffcc44;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+        
+        .logo {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: #fdbb2d;
+        }
+        
+        .variations {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+            margin: 1.5rem 0;
+        }
+        
+        .variation {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 0.9rem;
+        }
+        
+        @media (max-width: 600px) {
+            .container {
+                padding: 1.5rem;
+                margin: 1rem;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+            
+            p {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo">🔄</div>
+        <h1>Redirecting to Stobox</h1>
+        
+        <div class="url-display" id="currentUrl">
+            <!-- Current URL will be displayed here -->
+        </div>
+        
+        <p>We've noticed you're trying to access Stobox with a different capitalization. Don't worry, we're redirecting you to the correct page!</p>
+        
+        <div class="loader"></div>
+        
+        <p class="redirect-info" id="redirectInfo">Initializing redirect...</p>
+        
+        <div class="variations">
+            <div class="variation">Stobox</div>
+            <div class="variation">stobox</div>
+            <div class="variation">STOBOX</div>
+            <div class="variation">StoBox</div>
+            <div class="variation">sTOBOX</div>
+            <div class="variation">StObOx</div>
+        </div>
+        
+        <a href="https://stellher.github.io/Stobox/" class="manual-link" id="manualLink">
+            Click here if not redirected automatically
+        </a>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const currentUrlElement = document.getElementById('currentUrl');
+            const redirectInfoElement = document.getElementById('redirectInfo');
+            const manualLink = document.getElementById('manualLink');
+            
+            const currentUrl = window.location.href;
+            currentUrlElement.textContent = currentUrl;
+            
+            // Define the correct base URL
+            const correctBaseUrl = 'https://stellher.github.io/Stobox/';
+            
+            // Extract path from current URL
+            const urlObj = new URL(currentUrl);
+            const currentPath = urlObj.pathname;
+            
+            // Check if the path matches any Stobox variation (case-insensitive)
+            const stoboxRegex = /^\/([Ss][Tt][Oo][Bb][Oo][Xx])(\/.*)?$/;
+            const match = currentPath.match(stoboxRegex);
+            
+            if (match) {
+                // We have a Stobox variation in the path
+                const pathAfterStobox = match[2] || '';
+                
+                // Build the correct URL
+                const correctUrl = correctBaseUrl + pathAfterStobox.substring(1) + urlObj.search + urlObj.hash;
+                
+                redirectInfoElement.textContent = `Redirecting to: ${correctUrl}`;
+                manualLink.href = correctUrl;
+                
+                // Set a timeout to show the redirect process
+                setTimeout(() => {
+                    redirectInfoElement.textContent = `Redirecting now...`;
+                }, 1000);
+                
+                // Perform the redirect after a short delay to show the message
+                setTimeout(() => {
+                    window.location.href = correctUrl;
+                }, 2000);
+            } else {
+                // This doesn't appear to be a Stobox URL variation
+                redirectInfoElement.textContent = "This doesn't appear to be a Stobox URL. Redirecting to main Stobox page.";
+                manualLink.href = correctBaseUrl;
+                
+                setTimeout(() => {
+                    window.location.href = correctBaseUrl;
+                }, 3000);
+            }
+        });
+    </script>
+
+    <!-- Meta refresh as a fallback for non-JS browsers -->
+    <noscript>
+        <meta http-equiv="refresh" content="2;url=https://stellher.github.io/Stobox/">
+    </noscript>
+</body>
+</html>
