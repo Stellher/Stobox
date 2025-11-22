@@ -22,8 +22,8 @@
             --gray: #555;
             --light-gray: #999;
             --border-gray: #f5f5f5;
-            --shadow: 0 8px 30px rgba(0,0,0,0.12);
-            --shadow-hover: 0 15px 45px rgba(0,0,0,0.2);
+            --shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+            --shadow-hover: 0 15px 45px rgba(0, 0, 0, 0.2);
             --transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
@@ -129,7 +129,7 @@
         .header h1 {
             font-size: 2.8em;
             margin-bottom: 15px;
-            text-shadow: 0 4px 15px rgba(0,0,0,0.3);
+            text-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
             font-weight: 700;
             background: linear-gradient(135deg, #ffffff 0%, #f0f8ff 100%);
             -webkit-background-clip: text;
@@ -144,7 +144,7 @@
             font-weight: 300;
             max-width: 800px;
             line-height: 1.6;
-            text-shadow: 0 2px 8px rgba(0,0,0,0.2);
+            text-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
             margin-bottom: 10px;
         }
 
@@ -158,7 +158,7 @@
             background: rgba(255, 255, 255, 0.1);
             padding: 8px 20px;
             border-radius: 30px;
-            box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
         }
 
         /* 下载区域 */
@@ -352,7 +352,7 @@
             font-size: 1.8em;
             margin-bottom: 30px;
             text-align: center;
-            text-shadow: 0 3px 10px rgba(0,0,0,0.2);
+            text-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
             position: relative;
             animation: fadeIn 1s ease forwards;
             opacity: 0;
@@ -380,17 +380,31 @@
             animation: fadeInUp 0.8s ease forwards;
             opacity: 0;
             transform: translateY(50px);
-            border: 1px solid rgba(0,0,0,0.05);
+            border: 1px solid rgba(0, 0, 0, 0.05);
             position: relative;
             overflow: hidden;
         }
 
         /* 为每个卡片设置不同延迟动画 */
-        .update-card:nth-child(1) { animation-delay: 0.3s; }
-        .update-card:nth-child(2) { animation-delay: 0.5s; }
-        .update-card:nth-child(3) { animation-delay: 0.7s; }
-        .update-card:nth-child(4) { animation-delay: 0.9s; }
-        .update-card:nth-child(5) { animation-delay: 1.1s; }
+        .update-card:nth-child(1) {
+            animation-delay: 0.3s;
+        }
+
+        .update-card:nth-child(2) {
+            animation-delay: 0.5s;
+        }
+
+        .update-card:nth-child(3) {
+            animation-delay: 0.7s;
+        }
+
+        .update-card:nth-child(4) {
+            animation-delay: 0.9s;
+        }
+
+        .update-card:nth-child(5) {
+            animation-delay: 1.1s;
+        }
 
         .update-card:hover {
             transform: translateY(-5px);
@@ -463,7 +477,7 @@
         .feature-image img {
             width: 100%;
             border-radius: 8px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
             transition: var(--transition);
         }
 
@@ -495,7 +509,10 @@
             background: #38b2ac;
         }
 
-        .highlight-tag.4K, .highlight-tag.视觉升级 {
+        .highlight-tag
+
+        .4
+        K, .highlight-tag.视觉升级 {
             background: #9f7aea;
         }
 
@@ -507,7 +524,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(0,0,0,0.97);
+            background: rgba(0, 0, 0, 0.97);
             z-index: 9999;
             justify-content: center;
             align-items: center;
@@ -532,7 +549,7 @@
             max-width: 100%;
             max-height: 85vh;
             border-radius: 12px;
-            box-shadow: 0 15px 60px rgba(0,0,0,0.5);
+            box-shadow: 0 15px 60px rgba(0, 0, 0, 0.5);
             border: 4px solid white;
         }
 
@@ -545,7 +562,7 @@
             cursor: pointer;
             transition: var(--transition);
             z-index: 10000;
-            background: rgba(0,0,0,0.3);
+            background: rgba(0, 0, 0, 0.3);
             width: 60px;
             height: 60px;
             border-radius: 50%;
@@ -558,7 +575,7 @@
         .image-viewer-close:hover {
             transform: rotate(90deg) scale(1.2);
             color: var(--secondary);
-            background: rgba(0,0,0,0.5);
+            background: rgba(0, 0, 0, 0.5);
         }
 
         /* 底部信息 */
@@ -707,6 +724,7 @@
             .download-section {
                 padding: 40px;
             }
+
             .update-card {
                 padding: 35px;
             }
@@ -831,492 +849,553 @@
     </style>
 </head>
 <body>
-    <div class="container">
-        <div class="header">
-            <div class="logo-container">
-                <img src="https://yun.urldwz.com/f/5jrQUP/sparkle_icon.png" alt="StoBox Logo" class="app-logo">
-            </div>
-            <h1>StoBox 导航站</h1>
-            <div class="subtitle">记得收藏本站网址导航哦</div>
-            <div class="tagline">🎯 无广告 · 番剧影视 · 壁纸站 · 密码箱</div>
+<div class="container">
+    <div class="header">
+        <div class="logo-container">
+            <img src="https://yun.urldwz.com/f/5jrQUP/sparkle_icon.png" alt="StoBox Logo" class="app-logo">
+        </div>
+        <h1>StoBox 导航站</h1>
+        <div class="subtitle">记得收藏本站网址导航哦</div>
+        <div class="tagline">🎯 无广告 · 番剧影视 · 壁纸站 · 密码箱</div>
+    </div>
+
+    <div class="download-section">
+        <div class="version-info">
+            <span class="version-badge">最新版本 v2.6.3</span>
+            <span class="date-badge">发布时间: 2025-11-22</span>
         </div>
 
-        <div class="download-section">
-            <div class="version-info">
-                <span class="version-badge">最新版本 v2.6.2</span>
-                <span class="date-badge">发布时间: 2025-11-14</span>
-            </div>
+        <div class="download-links">
+            <a href="https://wwwh.qyshare.com:2999/s/jii7hi" class="download-btn" target="_blank">
+                ⚡ 无需登陆高速下载
+            </a>
+            <a href="https://yun.urldwz.com/s/eNenIp" class="download-btn" target="_blank">
+                无需登陆备用下载 - 较慢
+            </a>
+            <a href="https://www.123684.com/s/fFwsjv-NyYVv" class="download-btn" target="_blank">
+                ☁️ 123云盘下载
+            </a>
+            <a href="https://cloud.189.cn/t/UJjyEvaUNnu2" class="download-btn" target="_blank">
+                ☁️ 天翼云盘下载 (访问码: r2l5)
+            </a>
+        </div>
 
-            <div class="download-links">
-                <a href="https://wwwh.qyshare.com:2999/s/rexggz" class="download-btn" target="_blank">
-                    ⚡ 无需登陆高速下载
-                </a>
-                <a href="https://yun.urldwz.com/s/3r3RUr" class="download-btn" target="_blank">
-                     无需登陆备用下载 - 较慢
-                </a>
-                <a href="https://www.123684.com/s/fFwsjv-YcYVv" class="download-btn" target="_blank">
-                    ☁️ 123云盘下载
-                </a>
-                <a href="https://cloud.189.cn/t/IRNrqeny2QRv" class="download-btn" target="_blank">
-                    ☁️ 天翼云盘下载 (访问码: 1iqq)
-                </a>
+        <div class="tip-box">
+            <div class="tip-content">
+                <strong>重要提示：</strong><br>
+                如果您安装了2.6.2及以下版本的Stobox(Sparkle)，安装此新版本 2.6.3前，必须先卸载旧版再安装，切记勿要使用覆盖安装，覆盖安装会导致应用功能无法使用<br>
+                如果您安装了2.6.2及以下版本的Stobox(Sparkle)，安装此新版本 2.6.3前，必须先卸载旧版再安装，切记勿要使用覆盖安装，覆盖安装会导致应用功能无法使用<br>
+                如果您安装了2.6.2及以下版本的Stobox(Sparkle)，安装此新版本 2.6.3前，必须先卸载旧版再安装，切记勿要使用覆盖安装，覆盖安装会导致应用功能无法使用<br>
+                <br>
+                本App可看动漫、影视、韩剧、日剧、美剧、电影等，短剧如果搜得到的话也能看，可在搜索页面自行切换自带源，不同源的搜索范围不同，建议优先使用推荐源，解析成功率与解析时长和自身网络速度有关，可自行调节到合适自己网络情况的解析时间<br>
+                <br>
+                Tips：4K源不能覆盖大部分片子，不是所有番剧影视都有4K
             </div>
+        </div>
+    </div>
 
-            <div class="tip-box">
-                <div class="tip-content">
-                    <strong>重要提示：</strong>
-                    2.6.1的App内更新不再可用，请使用浏览器跳转链接下载或使用上述链接下载。建议使用「确认更新」按钮进行更新，享受极速稳定的下载体验！下载完成后请允许未知来源安装，安装前建议备份旧版本数据。
+    <h2 class="section-title">📝 版本更新日志</h2>
+    <div class="updates-section">
+
+         <div class="update-card">
+            <div class="update-header">
+                <span class="update-version">版本 2.6.3</span>
+                <span class="update-date">2025-11-22</span>
+            </div>
+            <div class="update-title">番剧影视优化 - 必须卸载旧版再安装新版</div>
+            <div class="update-content">
+                <div class="feature-item">
+                        <span class="feature-text">
+                            <strong>微调收藏、周更表、和推荐系列的布局边距</strong>
+                            <span class="highlight-tag">修复</span><br>
+                            「备注」：暂无
+                        </span>
                 </div>
+
+                <div class="feature-item">
+                        <span class="feature-text">
+                            <strong>跳过片尾的逻辑取消直接跳到片子尾部，改为直接解析下一集</strong>
+                            <span class="highlight-tag">优化</span><br>
+                            「备注」：暂无
+                        </span>
+                </div>
+
+                 <div class="feature-item">
+                        <span class="feature-text">
+                            <strong>增加历史观看记录的阶段性保存，提高保存历史观看记录的成功率</strong>
+                            <span class="highlight-tag">优化</span><br>
+                            「备注」：暂无
+                        </span>
+                </div>
+
+                <div class="feature-item">
+                        <span class="feature-text">
+                            <strong>修复在播放状态下换源弹窗中需要点击两次线路才成功显示点击线路的问题</strong>
+                            <span class="highlight-tag">优化</span><br>
+                            「备注」：暂无
+                        </span>
+                </div>
+
+                 <div class="feature-item">
+                        <span class="feature-text">
+                            <strong>推荐系列支持云端在线更新，检测到推荐系列配置更新后需退出再重进一次番剧影视刷新布局</strong>
+                            <span class="highlight-tag">优化</span><br>
+                            「备注」：暂无
+                        </span>
+                </div>
+                
+
+
+
+
             </div>
         </div>
 
-        <h2 class="section-title">📝 版本更新日志</h2>
-        <div class="updates-section">
-            <div class="update-card">
-                <div class="update-header">
-                    <span class="update-version">版本 2.6.2</span>
-                    <span class="update-date">2025-11-14</span>
-                </div>
-                <div class="update-title">番剧影视优化 - 无任何广告体验</div>
-                <div class="update-content">
-                    <div class="feature-item">
+        <div class="update-card">
+            <div class="update-header">
+                <span class="update-version">版本 2.6.2</span>
+                <span class="update-date">2025-11-14</span>
+            </div>
+            <div class="update-title">番剧影视优化 - 无任何广告体验</div>
+            <div class="update-content">
+                <div class="feature-item">
                         <span class="feature-text">
                             <strong>修复壁纸站的动态申请储存权限</strong>
                             <span class="highlight-tag">修复</span><br>
                             「备注」：单纯的忘记在测试时忘记取消注释动态申请权限的代码了
                         </span>
-                    </div>
+                </div>
 
-                    <div class="feature-item">
+                <div class="feature-item">
                         <span class="feature-text">
                             <strong>搜索框「X」按钮新增自动隐藏与显示效果</strong>
                             <span class="highlight-tag">新增</span><br>
                             更智能的交互设计，搜索框有内容时显示清除按钮，无内容时自动隐藏，提升界面简洁度
                         </span>
-                    </div>
+                </div>
 
-                    <div class="feature-item">
+                <div class="feature-item">
                         <span class="feature-text">
                             <strong>优化底部弹窗选集按钮和换源选集按钮显示样式</strong>
                             <span class="highlight-tag">优化</span><br>
                             「备注」：暂无
                         </span>
-                    </div>
+                </div>
 
-                    <div class="feature-item">
+                <div class="feature-item">
                         <span class="feature-text">
                             <strong>新增「国漫、国剧、国综、电影、外剧」等推荐系列以及推荐页轮播图</strong>
                             <span class="highlight-tag">新增</span><br>                
                             「备注」：暂无
                         </span>
-                        <div class="feature-image" onclick="openImageViewer(this)">
-                            <img src="https://icdn.binmt.cc/2511/6918697cdc16e.jpg" alt="轮播图">
-                        </div>
+                    <div class="feature-image" onclick="openImageViewer(this)">
+                        <img src="https://icdn.binmt.cc/2511/6918697cdc16e.jpg" alt="轮播图">
                     </div>
+                </div>
 
-                    <div class="feature-item">
+                <div class="feature-item">
                         <span class="feature-text">
                             <strong>修复播放器内播放下一集按钮的显示与隐藏逻辑</strong>
                             <span class="highlight-tag">修复</span><br>
                             优化播放器按钮显示逻辑，仅在视频播放完成后显示下一集按钮，避免播放过程中不必要的干扰
                         </span>
-                    </div>
+                </div>
 
-                    <div class="feature-item">
+                <div class="feature-item">
                         <span class="feature-text">
                             <strong>修复播放器缩放手势画面丢失问题</strong>
                             <span class="highlight-tag">修复</span><br>
                             解决在非播放状态使用缩放手势时画面可能丢失的问题，优化手势识别灵敏度
                         </span>
-                    </div>
+                </div>
 
-                    <div class="feature-item">
+                <div class="feature-item">
                         <span class="feature-text">
                             <strong>重新设计App Logo，正式更名为「StoBox」</strong><br>
                             「备注」：原名 Sparkle 工具箱 当简写了 Sparkle Tool Box 合称 StoBox
                         </span>
-                    </div>
+                </div>
 
-                    <div class="feature-item">
+                <div class="feature-item">
                         <span class="feature-text">
                             <strong>取消VPN检测机制，大幅提升流畅度</strong>
                             <span class="highlight-tag 性能优化">性能优化</span><br>
                             「备注」：取消垃圾的VPN检测机制，提升很大
                         </span>
-                    </div>
+                </div>
 
-                    <div class="feature-item">
+                <div class="feature-item">
                         <span class="feature-text">
                             <strong>优化「检查更新」代理商，极速稳定下载</strong>
                             <span class="highlight-tag">推荐</span><br>
                             「备注」：2.6.2版本后 强烈建议使用更新弹窗中的「确认更新」按钮更新App
                         </span>
-                    </div>
                 </div>
             </div>
+        </div>
 
-            <div class="update-card">
-                <div class="update-header">
-                    <span class="update-version">版本 2.6.1</span>
-                    <span class="update-date">2025-10-31</span>
-                </div>
-                <div class="update-title">播放器全面升级 - 更强大的观看体验</div>
-                <div class="update-content">
-                    <div class="feature-item">
+        <div class="update-card">
+            <div class="update-header">
+                <span class="update-version">版本 2.6.1</span>
+                <span class="update-date">2025-10-31</span>
+            </div>
+            <div class="update-title">播放器全面升级 - 更强大的观看体验</div>
+            <div class="update-content">
+                <div class="feature-item">
                         <span class="feature-text">
                             <strong>支持手势缩放播放器画面</strong>
                             <span class="highlight-tag">新增</span><br>
                             双指缩放自由调整画面大小，支持50％-300％缩放比例，观影体验更加个性化，适配不同场景需求
                         </span>
-                    </div>
+                </div>
 
-                    <div class="feature-item">
+                <div class="feature-item">
                         <span class="feature-text">
                             <strong>新增快捷键的进退时间选项</strong>
                             <span class="highlight-tag">新增</span><br>
                             支持自定义快捷键跳转时间（5秒/10秒/30秒），快速跳转，精准控制播放进度，操作更高效
                         </span>
-                    </div>
+                </div>
 
-                    <div class="feature-item">
+                <div class="feature-item">
                         <span class="feature-text">
                             <strong>播放器标题栏新增视频分辨率信息</strong>
                             <span class="highlight-tag">新增</span><br>
                            「备注」：暂无
                         </span>
-                    </div>
+                </div>
 
-                    <div class="feature-item">
+                <div class="feature-item">
                         <span class="feature-text">
                             <strong>新增底部虚拟按键导航栏和状态栏沉浸效果</strong>
                             <span class="highlight-tag 视觉升级">视觉升级</span><br>
                             全面屏沉浸式体验，画面更大更震撼，支持自动隐藏导航栏，观影无遮挡
                         </span>
-                    </div>
+                </div>
 
-                    <div class="feature-item">
+                <div class="feature-item">
                         <span class="feature-text">
                             <strong>新增底部虚拟按键导航栏和状态栏沉浸效果</strong>
                          </span>
-                    </div>
+                </div>
 
-                     <div class="feature-item">
+                <div class="feature-item">
                         <span class="feature-text">
                              <strong>修复点击全部选集时的切换逆序时的图标不正确</strong>
                          </span>
-                    </div>
+                </div>
 
-                     <div class="feature-item">
+                <div class="feature-item">
                         <span class="feature-text">
                             <strong>修复点击历史观看界面返回时播放器内无画面显示</strong>
                          </span>
-                    </div>
+                </div>
 
-                     <div class="feature-item">
+                <div class="feature-item">
                         <span class="feature-text">
                             <strong>修复历史观看记录在未观看动漫就保存首集的问题</strong>
                          </span>
-                    </div>
+                </div>
 
-                     <div class="feature-item">
+                <div class="feature-item">
                         <span class="feature-text">
                             <strong>优化播放器内右上角的齿轮⚙️图标「更多设置」的UI</strong>
                          </span>
-                    </div>
+                </div>
 
-                     <div class="feature-item">
+                <div class="feature-item">
                         <span class="feature-text">
                              <strong>优化主界面UI、更新轮播图样式、支持滑动折叠、展开标题栏</strong>
                          </span>
-                    </div>
+                </div>
 
-                     <div class="feature-item">
+                <div class="feature-item">
                         <span class="feature-text">
                              <strong>新增远程在线增加源、下架无效源、修复失效源等功能，无需更新下载App</strong>
                          </span>
-                    </div>
+                </div>
 
-                     <div class="feature-item">
+                <div class="feature-item">
                         <span class="feature-text">
                            <strong>壁纸站动漫Tag及其后面系列的壁纸全部更换为随机刷新系列，每次首次启动App时重置该壁纸系列的刷新机制</strong>
                          </span>
-                    </div>
+                </div>
 
 
-                    <div class="feature-item">
+                <div class="feature-item">
                         <span class="feature-text">
                             <strong>新增2个4K影视源</strong>
                             <span class="highlight-tag">新增</span>
                             <span class="highlight-tag 4K">4K</span><br>
                             解除线路名称显示限制，补全部分源的完整名称，享受超高清画质，支持HDR显示
                         </span>
-                    </div>
+                </div>
 
-                    <div class="feature-item">
+                <div class="feature-item">
                         <span class="feature-text">
                             <strong>数据库升级：SQLCipher → WCDB</strong>
                             <span class="highlight-tag 性能优化">性能优化</span><br>
                             安装包体积降低25%，流畅度提升40%，性能消耗减少30%，启动速度加快15%
                         </span>
-                    </div>
+                </div>
 
-                    <div class="feature-item">
+                <div class="feature-item">
                         <span class="feature-text">
                             <strong>新增远程在线管理影视源</strong>
                             <span class="highlight-tag 重磅">重磅功能</span><br>
                             无需更新App即可在线增加源、下架无效源、修复失效源，永远保持最佳状态，自动同步最新资源
                         </span>
-                    </div>
                 </div>
             </div>
+        </div>
 
-            <div class="update-card">
-                <div class="update-header">
-                    <span class="update-version">版本 2.6.0</span>
-                    <span class="update-date">2025-10-17</span>
-                </div>
-                <div class="update-title">壁纸站全面重构 - 更多精美壁纸</div>
-                <div class="update-content">
-                    <div class="feature-item">
+        <div class="update-card">
+            <div class="update-header">
+                <span class="update-version">版本 2.6.0</span>
+                <span class="update-date">2025-10-17</span>
+            </div>
+            <div class="update-title">壁纸站全面重构 - 更多精美壁纸</div>
+            <div class="update-content">
+                <div class="feature-item">
                         <span class="feature-text">
                             <strong>壁纸站新增米游社日榜图和酷安酷图系列</strong>
                             <span class="highlight-tag">新增</span><br>
                             包含二次元、萌宠、风景等多个系列，每日更新精选壁纸，支持按分类筛选，每天都有新发现
                         </span>
-                    </div>
+                </div>
 
-                    <div class="feature-item">
+                <div class="feature-item">
                         <span class="feature-text">
                             <strong>重构壁纸站，新增长按壁纸功能菜单</strong>
                             <span class="highlight-tag">重构</span><br>
                             支持「分享图片」、「保存原图」、「设为桌面&锁屏壁纸」，一键操作更便捷，壁纸加载速度提升
                         </span>
-                    </div>
+                </div>
 
-                    <div class="feature-item">
+                <div class="feature-item">
                         <span class="feature-text">
                             <strong>新增4K影视源和文才影视源</strong>
                             <span class="highlight-tag">新增</span><br>
                             更多高质量影视资源，支持多线路切换，观影选择更丰富，播放成功率提升
                         </span>
-                    </div>
+                </div>
 
-                    <div class="feature-item">
+                <div class="feature-item">
                         <span class="feature-text">
                             <strong>进一步缩减App安装包体积</strong>
                             <span class="highlight-tag">优化</span><br>
                             采用全新压缩算法，安装包体积再降15%，更小的体积，更快的安装速度，节省存储空间
                         </span>
-                    </div>
                 </div>
             </div>
+        </div>
 
-            <div class="update-card">
-                <div class="update-header">
-                    <span class="update-version">版本 2.5.9</span>
-                    <span class="update-date">2025-9-29</span>
-                </div>
-                <div class="update-title">排行榜上线 - 发现热门番剧</div>
-                <div class="update-content">
-                    <div class="feature-item">
+        <div class="update-card">
+            <div class="update-header">
+                <span class="update-version">版本 2.5.9</span>
+                <span class="update-date">2025-9-29</span>
+            </div>
+            <div class="update-title">排行榜上线 - 发现热门番剧</div>
+            <div class="update-content">
+                <div class="feature-item">
                         <span class="feature-text">
                             <strong>新增「完整榜单」动漫排行榜列表</strong>
                             <span class="highlight-tag">新增</span><br>
                             支持按热度、评分、更新时间排序，快速发现当前最热门的动漫作品，支持收藏榜单作品
                         </span>
-                    </div>
+                </div>
 
-                    <div class="feature-item">
+                <div class="feature-item">
                         <span class="feature-text">
                             <strong>替换为内置下载器更新软件包</strong>
                             <span class="highlight-tag">优化</span><br>
                             采用全新下载技术，更新更加稳定可靠，支持后台下载，下载完成自动提示安装
                         </span>
-                    </div>
+                </div>
 
-                    <div class="feature-item">
+                <div class="feature-item">
                         <span class="feature-text">
                             <strong>剔除32位架构支持</strong>
                             <span class="highlight-tag">优化</span><br>
                             进一步降低安装包体积，专注于现代设备体验，提升64位设备运行效率
                         </span>
-                    </div>
+                </div>
 
-                    <div class="feature-item">
+                <div class="feature-item">
                         <span class="feature-text">
                             <strong>新增删除收藏项目功能</strong>
                             <span class="highlight-tag">新增</span><br>
                             长按进入删除模式，支持批量删除，管理收藏更加灵活，收藏列表支持搜索筛选
                         </span>
-                    </div>
                 </div>
             </div>
+        </div>
 
-            <div class="update-card">
-                <div class="update-header">
-                    <span class="update-version">版本 2.5.8</span>
-                    <span class="update-date">2025-9-10</span>
-                </div>
-                <div class="update-title">详情页UI重设计</div>
-                <div class="update-content">
-                    <div class="tip-box" style="margin-bottom: 20px;">
-                        <div class="tip-content">
-                            <strong>升级提示：</strong>
-                            升级最新版建议先卸载旧版再安装，以获得最佳体验。卸载前请备份好收藏和观看历史数据
-                        </div>
+        <div class="update-card">
+            <div class="update-header">
+                <span class="update-version">版本 2.5.8</span>
+                <span class="update-date">2025-9-10</span>
+            </div>
+            <div class="update-title">详情页UI重设计</div>
+            <div class="update-content">
+                <div class="tip-box" style="margin-bottom: 20px;">
+                    <div class="tip-content">
+                        <strong>升级提示：</strong>
+                        升级最新版建议先卸载旧版再安装，以获得最佳体验。卸载前请备份好收藏和观看历史数据
                     </div>
+                </div>
 
-                    <div class="feature-item">
+                <div class="feature-item">
                         <span class="feature-text">
                             <strong>新增详情页UI并增加旧版详情页开关</strong>
                             <span class="highlight-tag">新增</span><br>
                             全新设计的详情页面，布局更合理，信息更清晰，同时保留旧版供用户选择，满足不同使用习惯
                         </span>
-                    </div>
+                </div>
 
-                    <div class="feature-item">
+                <div class="feature-item">
                         <span class="feature-text">
                             <strong>播放器内新增线路选择</strong>
                             <span class="highlight-tag">新增</span><br>
                             取消首次解析弹窗，直接在播放器内快速切换线路，支持线路质量显示，选择更精准
                         </span>
-                    </div>
+                </div>
 
-                    <div class="feature-item">
+                <div class="feature-item">
                         <span class="feature-text">
                             <strong>倍速滑动条新增可视化与重置功能</strong>
                             <span class="highlight-tag">新增</span><br>
                             点击显示按钮可直接重置为1.0倍速，操作更加直观，支持0.5x-2.0x倍速调节
                         </span>
-                    </div>
+                </div>
 
-                    <div class="feature-item">
+                <div class="feature-item">
                         <span class="feature-text">
                             <strong>新版详情页和播放器支持无限次解析尝试</strong>
                             <span class="highlight-tag">优化</span><br>
                             解决解析失败时无法再次解析的问题，永不放弃，自动切换备用线路，提升播放成功率
                         </span>
-                    </div>
                 </div>
             </div>
         </div>
-
-        <div class="footer">
-            <h3>StoBox 官方更新平台</h3>
-            <div class="footer-links">
-                <a href="#" class="footer-link">📢 问题反馈</a>
-                <a href="#" class="footer-link">📚 使用教程</a>
-                <a href="#" class="footer-link">🔔 订阅更新</a>
-            </div>
-            <div class="copyright">
-                © 2025 StoBox 官方版权所有 | 持续优化，只为更好体验
-            </div>
-        </div>
     </div>
 
-    <!-- 图片查看器 -->
-    <div class="image-viewer" id="imageViewer">
-        <span class="image-viewer-close" onclick="closeImageViewer()">&times;</span>
-        <div class="viewer-content">
-            <img src="" alt="放大查看" id="viewerImage">
+    <div class="footer">
+        <h3>StoBox 官方更新平台</h3>
+        <div class="footer-links">
+            <a href="#" class="footer-link">📢 问题反馈</a>
+            <a href="#" class="footer-link">📚 使用教程</a>
+            <a href="#" class="footer-link">🔔 订阅更新</a>
+        </div>
+        <div class="copyright">
+            © 2025 StoBox 官方版权所有 | 持续优化，只为更好体验
         </div>
     </div>
+</div>
 
-    <script>
-        // 图片查看器功能
-        function openImageViewer(element) {
-            const viewer = document.getElementById('imageViewer');
-            const viewerImage = document.getElementById('viewerImage');
-            
-            // 获取图片
-            const imgSrc = element.querySelector('img').src;
-            
-            viewerImage.src = imgSrc;
-            viewer.classList.add('active');
-            document.body.style.overflow = 'hidden';
-            
-            // 添加打开动画
-            setTimeout(() => {
-                document.querySelector('.viewer-content').style.transform = 'scale(1)';
-                document.querySelector('.viewer-content').style.opacity = '1';
-            }, 50);
+<!-- 图片查看器 -->
+<div class="image-viewer" id="imageViewer">
+    <span class="image-viewer-close" onclick="closeImageViewer()">&times;</span>
+    <div class="viewer-content">
+        <img src="" alt="放大查看" id="viewerImage">
+    </div>
+</div>
+
+<script>
+    // 图片查看器功能
+    function openImageViewer(element) {
+        const viewer = document.getElementById('imageViewer');
+        const viewerImage = document.getElementById('viewerImage');
+
+        // 获取图片
+        const imgSrc = element.querySelector('img').src;
+
+        viewerImage.src = imgSrc;
+        viewer.classList.add('active');
+        document.body.style.overflow = 'hidden';
+
+        // 添加打开动画
+        setTimeout(() => {
+            document.querySelector('.viewer-content').style.transform = 'scale(1)';
+            document.querySelector('.viewer-content').style.opacity = '1';
+        }, 50);
+    }
+
+    function closeImageViewer() {
+        const viewer = document.getElementById('imageViewer');
+        const viewerContent = document.querySelector('.viewer-content');
+
+        // 添加关闭动画
+        viewerContent.style.transform = 'scale(0.9)';
+        viewerContent.style.opacity = '0';
+
+        setTimeout(() => {
+            viewer.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }, 300);
+    }
+
+    // 点击图片外部关闭
+    document.getElementById('imageViewer').addEventListener('click', function (e) {
+        if (e.target === this) {
+            closeImageViewer();
         }
+    });
 
-        function closeImageViewer() {
-            const viewer = document.getElementById('imageViewer');
-            const viewerContent = document.querySelector('.viewer-content');
-            
-            // 添加关闭动画
-            viewerContent.style.transform = 'scale(0.9)';
-            viewerContent.style.opacity = '0';
-            
-            setTimeout(() => {
-                viewer.classList.remove('active');
-                document.body.style.overflow = 'auto';
-            }, 300);
+    // 键盘ESC关闭
+    document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && document.getElementById('imageViewer').classList.contains('active')) {
+            closeImageViewer();
         }
+    });
 
-        // 点击图片外部关闭
-        document.getElementById('imageViewer').addEventListener('click', function(e) {
-            if (e.target === this) {
-                closeImageViewer();
-            }
-        });
-
-        // 键盘ESC关闭
-        document.addEventListener('keydown', function(e) {
-            if (e.key === 'Escape' && document.getElementById('imageViewer').classList.contains('active')) {
-                closeImageViewer();
-            }
-        });
-
-        // 滚动动画 - 元素进入视口时触发动画
-        document.addEventListener('DOMContentLoaded', function() {
-            // 监听滚动事件
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.style.opacity = 1;
-                        entry.target.style.transform = 'translateY(0)';
-                    }
-                });
-            }, { threshold: 0.1 });
-
-            // 为所有需要动画的元素添加监听
-            document.querySelectorAll('.update-card, .footer, .section-title').forEach(el => {
-                el.style.opacity = 0;
-                el.style.transform = 'translateY(30px)';
-                el.style.transition = 'all 0.8s cubic-bezier(0.25, 1, 0.5, 1)';
-                observer.observe(el);
-            });
-
-            // 下载按钮添加脉冲动画
-            const downloadBtns = document.querySelectorAll('.download-btn');
-            downloadBtns.forEach((btn, index) => {
-                setTimeout(() => {
-                    btn.style.animation = 'pulse 2s ease';
-                    setTimeout(() => {
-                        btn.style.animation = 'none';
-                    }, 2000);
-                }, index * 300);
-            });
-        });
-
-        // 平滑滚动
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const targetId = this.getAttribute('href');
-                if (targetId === '#') return;
-                
-                const targetElement = document.querySelector(targetId);
-                if (targetElement) {
-                    targetElement.scrollIntoView({
-                        behavior: 'smooth'
-                    });
+    // 滚动动画 - 元素进入视口时触发动画
+    document.addEventListener('DOMContentLoaded', function () {
+        // 监听滚动事件
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = 1;
+                    entry.target.style.transform = 'translateY(0)';
                 }
             });
+        }, {threshold: 0.1});
+
+        // 为所有需要动画的元素添加监听
+        document.querySelectorAll('.update-card, .footer, .section-title').forEach(el => {
+            el.style.opacity = 0;
+            el.style.transform = 'translateY(30px)';
+            el.style.transition = 'all 0.8s cubic-bezier(0.25, 1, 0.5, 1)';
+            observer.observe(el);
         });
-    </script>
+
+        // 下载按钮添加脉冲动画
+        const downloadBtns = document.querySelectorAll('.download-btn');
+        downloadBtns.forEach((btn, index) => {
+            setTimeout(() => {
+                btn.style.animation = 'pulse 2s ease';
+                setTimeout(() => {
+                    btn.style.animation = 'none';
+                }, 2000);
+            }, index * 300);
+        });
+    });
+
+    // 平滑滚动
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const targetId = this.getAttribute('href');
+            if (targetId === '#') return;
+
+            const targetElement = document.querySelector(targetId);
+            if (targetElement) {
+                targetElement.scrollIntoView({
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
+</script>
 </body>
 </html>
